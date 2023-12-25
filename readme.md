@@ -5,7 +5,7 @@ You can customize the name, message, add any number of ordered or unordered list
 Runs on the latest Windows 10.
 
 ## Installation
-- Download the latest [release](https://github.com/NicholasDJM/TF2Motd/releases)
+- Download the latest [release](https://github.com/NicholasDJM/TF2Motd/archive/refs/tags/v1.0.0.zip)
 - Extract all contents of the zip file to an empty folder of your choice.
 
 ## How to use TF2Motd
