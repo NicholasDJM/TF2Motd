@@ -1,0 +1,17 @@
+{
+	"devDependencies":{
+		"deno-types":"latest",
+		"vite": "latest",
+		"postcss-preset-env": "latest",
+		"vite-plugin-babel": "latest",
+		"vanilla-lazyload": "latest"
+	},
+	"browserslist":[
+		"chrome 85"
+	],
+	"postcss": {
+		"plugins": {
+			"postcss-preset-env": {}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+ctf_2fort
+pl_badwater
+pl_upward
+cp_dustbowl
+cp_gorge

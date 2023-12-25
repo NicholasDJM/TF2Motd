@@ -1,0 +1,57 @@
+@font-face {
+	font-family: "TF2 Professor";
+	src: url("tf2professor.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+html {
+	font-family: "TF2 Professor";
+	font-size: 32px; /* This needs to be large to look okay in TF2 */
+	color: white;
+	block-size: 100%;
+	inline-size: 100%;
+}
+body {
+	margin: 0;
+	min-block-size: 100%;
+	inline-size: 100%;
+	display: grid;
+	align-content: space-between;
+}
+* {
+	box-sizing: border-box;
+	user-drag: none;
+	user-select: none;
+}
+ol,ul {
+	padding-inline-start: 1rem;
+	margin-block: 0;
+}
+h1 {
+	margin-block: 0 0.25rem;
+	font-weight: 100;
+}
+h2 {
+	text-align: center;
+	margin: 0 0;
+	font-weight: 100;
+}
+.background {
+	position: fixed;
+	inset: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	z-index: -1;
+}
+main {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+article:not(:only-child) {
+	margin-inline: auto;
+}
+a,:visited {
+	color: white;
+}

@@ -1,0 +1,29 @@
+- var lists = lists
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Message of the Day
+		link(rel="stylesheet", href="styles.css" fetchpriority="high")
+		link(rel="modulepreload", href="https://cdn.jsdelivr.net/npm/lunarphase-js@2.0.1/dist/index.es.js", integrity="sha256-MhQrT3/yVbzwfhE30RVROD3eS/025NfSb/S9wPt3ojI=", crossorigin="anonymous")
+		script(type="module", src="main.js")
+	body
+		img.background.lazy(src="blackboard_low.webp", alt="")
+		div
+			h1#title(data-name=name) Welcome to #{name}!
+			p=message
+			main
+				each list in lists
+					article
+						h2=list.name
+						if list.type == "ol"
+							ol
+								each value in list.items
+									li=value
+						else
+							ul
+								each value in list.items
+									li=value
+		aside
+			span Server restarts everyday at #{time}
