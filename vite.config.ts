@@ -5,7 +5,8 @@ export default defineConfig({
 	build: {
 		outDir: "../dist",
 		modulePreload: false,
-		emptyOutDir: true
+		emptyOutDir: true,
+		sourcemap: true
 	},
 	plugins: [
 		babel()

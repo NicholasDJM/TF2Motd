@@ -4,7 +4,8 @@
 		"vite": "latest",
 		"postcss-preset-env": "latest",
 		"vite-plugin-babel": "latest",
-		"vanilla-lazyload": "latest"
+		"lozad": "latest",
+		"lunarphase-js": "latest"
 	},
 	"browserslist":[
 		"chrome 85"

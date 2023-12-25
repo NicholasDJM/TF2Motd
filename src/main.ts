@@ -1,15 +1,15 @@
-import lazyload from "vanilla-lazyload";
+import lozad from "lozad";
 import highres from "./blackboard.webp";
-import { Moon } from "https://cdn.jsdelivr.net/npm/lunarphase-js@2.0.1/dist/index.es.js";
+import { Moon } from "lunarphase-js";
 
-const background = document.querySelector(".background")
+const background: HTMLImageElement = document.querySelector(".background")
 if (background) {
 	background.dataset.src = highres;
+	lozad(".lazy").observe();
 }
 
-new lazyload({});
 
-const months = {
+const months: Record<string, number> = {
 		january: 0,
 		february: 1,
 		march: 2,
@@ -23,10 +23,10 @@ const months = {
 		november: 10,
 		december: 11
 	},
-	title = document.getElementById("title"),
+	title: HTMLHeadingElement = document.querySelector("#title"),
 	original = "Welcome to " + (title.dataset.name || "My Server"),
 	day = new Date().getDay();
-function set(message) {
+function set(message: string) {
 	title.innerHTML = original+" and "+message
 }
 if (title) {
@@ -35,6 +35,7 @@ if (title) {
 			if (day === 13) { // February 14th
 				set("Happy Valentine's Day!")
 			}
+			break;
 		}
 		case months.april: {
 			if (day === 0) { // April 1st
@@ -47,6 +48,7 @@ if (title) {
 			} else {
 				set("Happy Halloween!")
 			}
+			break;
 		}
 		case months.december: {
 			if (day === 30) { // December 31st
@@ -54,11 +56,13 @@ if (title) {
 			} else {
 				set("Merry Smissmas!")
 			}
+			break;
 		}
 		case months.august: {
 			if (day === 23) { //August 24th
 				set("Happy Birthday Team Fortress!")
 			}
+			break;
 		}
 		default: {
 			if (Moon.lunarPhase() === "Full") {

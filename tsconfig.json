@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "NodeNext",
+		"module": "NodeNext",
+		"lib": [
+			"dom"
+		]
+	},
+	"include": [
+		"/src"
+	]
+}
