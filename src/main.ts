@@ -1,8 +1,9 @@
 import lozad from "lozad";
+//@ts-expect-error Not a JS file.
 import highres from "./blackboard.webp";
 import { Moon } from "lunarphase-js";
 
-const background: HTMLImageElement = document.querySelector(".background")
+const background = document.querySelector(".background") as HTMLImageElement;
 if (background) {
 	background.dataset.src = highres;
 	lozad(".lazy").observe();
@@ -23,7 +24,7 @@ const months: Record<string, number> = {
 		november: 10,
 		december: 11
 	},
-	title: HTMLHeadingElement = document.querySelector("#title"),
+	title = document.querySelector("#title") as HTMLHeadingElement,
 	original = "Welcome to " + (title.dataset.name || "My Server"),
 	day = new Date().getDay();
 function set(message: string) {

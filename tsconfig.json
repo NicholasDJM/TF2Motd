@@ -3,10 +3,11 @@
 		"moduleResolution": "NodeNext",
 		"module": "NodeNext",
 		"lib": [
-			"dom"
+			"dom",
+			"ESNext"
 		]
 	},
 	"include": [
-		"/src"
+		"./src/*.ts"
 	]
 }

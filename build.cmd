@@ -3,6 +3,11 @@ if not exist C:\Windows\System32\where.exe echo Must have the latest version of 
 where /Q deno
 if %errorlevel% NEQ 0 echo Must have Deno installed. Run "winget install deno"&&pause&&exit /b 1
 :: Compile pug template
-deno run --allow-read=./src/index.pug,./lists/*.txt,./src/lists,./src/motd.txt,./src/name.txt,./src/time.txt --allow-write=./src/index.html build.ts
+:: Allow read, and write.
+deno run --allow-read --allow-write build.ts
 :: Build and minify
-deno run -A --unstable --node-modules-dir npm:vite build
+:: Allow read, write, foreign function interface, system calls, environment variable access, and command execution.
+:: Enable unstable APIs, like FFI.
+:: --node-modules-dir Resolve modules from the node_modules directory.
+:: Run "vite build"
+deno run --allow-read --allow-write --allow-ffi --allow-sys --allow-env --allow-run --unstable --node-modules-dir npm:vite build

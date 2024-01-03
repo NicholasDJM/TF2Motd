@@ -1,13 +1,17 @@
 {
-	"devDependencies":{
-		"deno-types":"latest",
-		"vite": "latest",
-		"postcss-preset-env": "latest",
-		"vite-plugin-babel": "latest",
+	
+	"dependencies": {
 		"lozad": "latest",
 		"lunarphase-js": "latest"
 	},
-	"browserslist":[
+	"devDependencies": {
+		"deno-types": "latest",
+		"postcss-preset-env": "latest",
+		"vite": "latest",
+		"vite-plugin-babel": "latest",
+		"vite-plugin-minify": "latest"
+	},
+	"browserslist": [
 		"chrome 85"
 	],
 	"postcss": {

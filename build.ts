@@ -4,14 +4,6 @@ import { compile } from "https://cdn.jsdelivr.net/gh/lumeland/pug@master/mod.ts"
 
 let files: Deno.DirEntry[] = []
 // Get all text files in /lists that start with ul_ or ol_
-// const files: Deno.DirEntry[] = Object.values(Deno.readDirSync("./lists")).filter(
-// 	file=>
-// 		file.isFile()
-// 	//&&  new RegExp("^(ol|ul)_.+\\.txt$").test(file.name)
-// )
-
-// console.log(await Deno.readDir("./lists"))
-
 for await (const file of Deno.readDir("./src/lists")) {
 	if (file.isFile && new RegExp("^\\d*(ul|ol)_.+\\.txt$").test(file.name)) {
 		files.push(file)

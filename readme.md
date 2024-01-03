@@ -1,11 +1,14 @@
 # TF2Motd
+[![Latest version](https://img.shields.io/github/v/release/NicholasDJM/TF2Motd?style=plastic)](https://github.com/NicholasDJM/TF2Motd) ![GitHub last commit](https://img.shields.io/github/last-commit/NicholasDJM/TF2Motd/main?style=plastic)
+
+
 A tool to generate a custom HTML Message of the Day, that matches the style of Team Fortress 2's MOTD chalkboard.  
 You can customize the name, message, add any number of ordered or unordered lists, and change the restart time.
 
 Runs on the latest Windows 10.
 
 ## Installation
-- Download the latest [release](https://github.com/NicholasDJM/TF2Motd/archive/refs/tags/v1.0.2.zip)
+- Download the latest [release](https://github.com/NicholasDJM/TF2Motd/archive/refs/tags/v1.0.3.zip)
 - Extract all contents of the zip file to an empty folder of your choice.
 
 ## How to use TF2Motd
